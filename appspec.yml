@@ -1,11 +1,15 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /tmp
+  - source: #hay que ir a donde está el .war
+    destination: /opt/tomcat/webapps
 hooks:
   ApplicationStop:
     - location: codedeploy-scripts/stop.sh
+      timeout: 300
+      runas: root
+  ApplicationBeforeInstall:
+    - location: codedeploy-scripts/beforeinstall.sh
       timeout: 300
       runas: root
   ApplicationStart:
