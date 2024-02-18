@@ -8,7 +8,7 @@ hooks:
     - location: codedeploy-scripts/stop.sh
       timeout: 300
       runas: root
-  ApplicationBeforeInstall:
+  BeforeInstall:
     - location: codedeploy-scripts/beforeinstall.sh
       timeout: 300
       runas: root
