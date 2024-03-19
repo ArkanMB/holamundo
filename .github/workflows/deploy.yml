@@ -39,4 +39,4 @@ jobs:
     - name: Para ver si imprime bien el hash en la consola
       run: echo $SHA
 
-        
+      # Ahora faltaría crear el cloudformation y el codedeploy
